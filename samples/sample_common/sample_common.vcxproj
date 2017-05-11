@@ -254,6 +254,12 @@
     <ClInclude Include="include\mfx_samples_config.h" />
     <ClInclude Include="include\plugin_loader.h" />
     <ClInclude Include="include\plugin_utils.h" />
+    <ClInclude Include="include\proto\client.h" />
+    <ClInclude Include="include\proto\common.h" />
+    <ClInclude Include="include\proto\cpp_debug.h" />
+    <ClInclude Include="include\proto\server_info.h" />
+    <ClInclude Include="include\proto\spinlock.h" />
+    <ClInclude Include="include\proto\VideoProto.h" />
     <ClInclude Include="include\sample_defs.h" />
     <ClInclude Include="include\sample_params.h" />
     <ClInclude Include="include\sample_types.h" />
@@ -284,6 +290,7 @@
     <ClCompile Include="src\plugin_utils.cpp" />
     <ClCompile Include="src\sample_utils.cpp" />
     <ClCompile Include="src\sysmem_allocator.cpp" />
+    <ClCompile Include="src\VideoProto.cpp" />
     <ClCompile Include="src\vpp_ex.cpp" />
     <ClCompile Include="src\vm\atomic.cpp" />
     <ClCompile Include="src\vm\shared_object.cpp" />

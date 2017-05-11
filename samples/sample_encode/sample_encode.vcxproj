@@ -289,7 +289,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="proto\src\VideoProto.cpp" />
     <ClCompile Include="src\pipeline_encode.cpp" />
     <ClCompile Include="src\pipeline_region_encode.cpp" />
     <ClCompile Include="src\pipeline_user.cpp" />
@@ -299,7 +298,6 @@
     <ClInclude Include="include\pipeline_encode.h" />
     <ClInclude Include="include\pipeline_region_encode.h" />
     <ClInclude Include="include\pipeline_user.h" />
-    <ClInclude Include="proto\inc\VideoProto.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\sample_common\sample_common.vcxproj">

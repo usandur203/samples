@@ -374,9 +374,13 @@ mfxStatus CSmplBitstreamWriter::WriteNextFrame(mfxBitstream *pMfxBitstream, bool
 
     mfxU32 nBytesWritten = 0;
 
+#ifndef NETAPI
     nBytesWritten = (mfxU32)fwrite(pMfxBitstream->Data + pMfxBitstream->DataOffset, 1, pMfxBitstream->DataLength, m_fSource);
     MSDK_CHECK_NOT_EQUAL(nBytesWritten, pMfxBitstream->DataLength, MFX_ERR_UNDEFINED_BEHAVIOR);
-
+#else
+	// transfer the frame to the network buffer api 
+	netApi->addPolledFrame(buff, bufferSize, outputType);
+#endif
     // mark that we don't need bit stream data any more
     pMfxBitstream->DataLength = 0;
 
